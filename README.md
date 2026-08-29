@@ -76,6 +76,10 @@ works at any resolution. Layouts and preferences are stored under `%APPDATA%\sid
 Windows has a layout picker of its own that appears when you drag to the top of the screen.
 The two collide. Turn it off under Settings > System > Multitasking.
 
+A monitor manufacturer's own utility may arrange windows too, under a name like Easy Arrange.
+That collides in the same way. Turn off its window arrangement, or leave sideband's snapping
+off and use the tray only for monitor controls.
+
 ### Arranging open windows
 
 **Arrange windows now** puts the windows already open on that monitor into the current layout.
@@ -236,6 +240,11 @@ change.
 **A laptop screen and an external monitor disagree.** The Windows brightness slider writes the
 same control sideband writes, so a change in either place shows up in the other. It does not
 reach external monitors. A laptop at 50 and an external monitor at 40 is normal.
+
+**The tray shows a layout that is not how your windows are arranged.** **Use layout** names
+the layout a drag or **Arrange windows now** will apply. It does not report the current
+arrangement, and it cannot: Windows keeps no record of one, so a window manager that moved
+your windows leaves nothing for sideband to read. Pick the layout you want from that submenu.
 
 **The laptop screen is missing from `list`.** Its display driver answered neither route
 sideband uses. Where the screen does appear, `sideband caps internal` names the route that
