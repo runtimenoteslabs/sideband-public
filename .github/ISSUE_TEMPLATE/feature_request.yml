@@ -1,0 +1,28 @@
+name: Feature request
+description: Something sideband should do and does not.
+labels: [enhancement]
+body:
+  - type: textarea
+    id: want
+    attributes:
+      label: What you want it to do
+    validations:
+      required: true
+
+  - type: textarea
+    id: today
+    attributes:
+      label: What you do today
+      description: >
+        How you work around it now, including with another tool. Knowing the workaround
+        says more about the shape of the feature than the request usually does.
+    validations:
+      required: true
+
+  - type: textarea
+    id: hardware
+    attributes:
+      label: Hardware
+      description: The displays involved, if the request depends on them.
+    validations:
+      required: false

@@ -1,0 +1,9 @@
+blank_issues_enabled: false
+
+contact_links:
+  - name: Report a security vulnerability
+    url: https://github.com/runtimenoteslabs/sideband-public/security/advisories/new
+    about: Report privately. Do not open a public issue for a vulnerability.
+  - name: Download the latest release
+    url: https://github.com/runtimenoteslabs/sideband-public/releases/latest
+    about: The binary, its SHA-256 and the notes on running an unsigned build.

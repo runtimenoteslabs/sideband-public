@@ -1,0 +1,65 @@
+name: Bug report
+description: Something sideband does wrong on your hardware.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        The source for sideband is not in this repository, so the detail you give here is
+        what a fix is built from. Monitors differ, and most reports come down to what one
+        display answered.
+
+  - type: input
+    id: release
+    attributes:
+      label: Release
+      description: The tag you downloaded, from the releases page.
+      placeholder: v0.1.0
+    validations:
+      required: true
+
+  - type: input
+    id: windows
+    attributes:
+      label: Windows version
+      description: Run `winver`, or read Settings > System > About.
+      placeholder: Windows 11 24H2, build 26100.1742
+    validations:
+      required: true
+
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you did, what you expected and what you got instead.
+    validations:
+      required: true
+
+  - type: textarea
+    id: list
+    attributes:
+      label: Output of `sideband list`
+      description: Paste it whole. It names every display sideband found and how it identified each one.
+      render: text
+    validations:
+      required: true
+
+  - type: textarea
+    id: caps
+    attributes:
+      label: Output of `sideband caps <display>`
+      description: >
+        For anything involving one display, paste its capabilities string. It is what the
+        monitor claims it supports, and it is usually where the answer is. Leave it out for
+        a problem with window arrangement.
+      render: text
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: not-security
+    attributes:
+      label: Confirm
+      options:
+        - label: This is not a security vulnerability. Those go through private reporting instead.
+          required: true
